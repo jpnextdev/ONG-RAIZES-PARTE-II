@@ -1,0 +1,15 @@
+/* Badges (status/categoria) e tags (palavras-chave) */
+.badge { display: inline-block; padding: 0.15rem 0.7rem; border-radius: var(--raio-pill); font-size: var(--texto-xs); font-weight: var(--peso-semi); letter-spacing: 0.02em; line-height: 1.6; background: var(--cor-broto); color: var(--cor-mata); }
+.badge-terra { background: var(--cor-areia); color: var(--cor-terra); }
+.badge-solido { background: var(--cor-folha); color: var(--cor-branco); }
+.badge-girassol { background: var(--cor-girassol); color: var(--cor-tinta); }
+.badge-sucesso { background: var(--cor-sucesso-fundo); color: var(--cor-sucesso); }
+.badge-erro { background: var(--cor-erro-fundo); color: var(--cor-erro); }
+.badge-aviso { background: var(--cor-aviso-fundo); color: var(--cor-aviso); }
+.badge-info { background: var(--cor-info-fundo); color: var(--cor-info); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+.tags li { max-width: none; }
+.tag { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.2rem 0.65rem; border: 1px solid var(--cor-cinza-200); border-radius: var(--raio-sm); background: var(--cor-papel); color: var(--cor-cinza-600); font-size: var(--texto-xs); font-weight: var(--peso-semi); text-decoration: none; transition: background var(--transicao), border-color var(--transicao); }
+.tag::before { content: "#"; color: var(--cor-folha); }
+a.tag:hover { background: var(--cor-broto); border-color: var(--cor-folha); color: var(--cor-mata); }

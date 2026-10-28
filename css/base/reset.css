@@ -1,0 +1,23 @@
+/* Reset e padrões globais */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--altura-topo) + var(--espaco-16)); }
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  font-size: var(--texto-base);
+  line-height: var(--altura-linha-texto);
+  color: var(--cor-tinta);
+  background: var(--cor-papel);
+}
+img { max-width: 100%; height: auto; display: block; }
+picture { display: block; }
+figure { margin: 0; }
+address { font-style: normal; }
+ul, ol { padding-left: 1.2rem; }
+:focus-visible { outline: 3px solid var(--cor-girassol); outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.pular { position: absolute; left: -999px; top: 0; background: var(--cor-mata); color: var(--cor-branco); padding: var(--espaco-8) var(--espaco-16); z-index: var(--z-toast); }
+.pular:focus { left: var(--espaco-16); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

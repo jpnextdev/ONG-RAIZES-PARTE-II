@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia de estilo | Instituto Raízes do Bairro</title>
+  <meta name="description" content="Design system do Instituto Raízes do Bairro: cores, tipografia, espaçamento, grid e componentes.">
+  <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <a class="marca" href="index.html">
+      <img src="imagens/logo.svg" alt="" width="44" height="44">
+      <span>Instituto Raízes do Bairro</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="menu-toggle-barras" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+    <nav class="menu" id="menu-principal" aria-label="Menu principal">
+      <ul class="menu-lista">
+        <li><a href="index.html">Início</a></li>
+        <li class="tem-submenu">
+          <a href="index.html#sobre">Instituição</a>
+          <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="sub-instituicao"><span class="sr-only">Abrir submenu de Instituição</span></button>
+          <ul class="submenu" id="sub-instituicao">
+            <li><a href="index.html#sobre">Missão, visão e valores</a></li>
+            <li><a href="index.html#historia">Nossa história</a></li>
+            <li><a href="index.html#equipe">Equipe e estrutura</a></li>
+            <li><a href="index.html#transparencia">Transparência</a></li>
+          </ul>
+        </li>
+        <li class="tem-submenu">
+          <a href="projetos.html">Projetos</a>
+          <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="sub-projetos"><span class="sr-only">Abrir submenu de Projetos</span></button>
+          <ul class="submenu" id="sub-projetos">
+            <li><a href="projetos.html#horta-escola">Horta na Escola</a></li>
+            <li><a href="projetos.html#cozinha">Cozinha Comunitária</a></li>
+            <li><a href="projetos.html#sementes">Sementes do Amanhã</a></li>
+            <li><a href="projetos.html#voluntariado">Seja voluntário</a></li>
+            <li><a href="projetos.html#doar">Como doar</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li class="menu-cta"><a href="cadastro.html">Cadastre-se</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="bloco cabecalho-pagina" aria-labelledby="titulo-pagina">
+      <h1 id="titulo-pagina">Guia de estilo</h1>
+      <p>Design system do Instituto Raízes do Bairro: tokens em <code>css/base/tokens.css</code> e componentes em <code>css/components/</code>.</p>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-cores">
+      <h2 id="t-cores">Paleta de cores</h2>
+      <ul class="amostras"><li><div class="amostra-cor" style="--c: var(--cor-mata)"></div><strong>--cor-mata</strong>Primária</li><li><div class="amostra-cor" style="--c: var(--cor-folha)"></div><strong>--cor-folha</strong>Primária</li><li><div class="amostra-cor" style="--c: var(--cor-girassol)"></div><strong>--cor-girassol</strong>Secundária</li><li><div class="amostra-cor" style="--c: var(--cor-terra)"></div><strong>--cor-terra</strong>Secundária</li><li><div class="amostra-cor" style="--c: var(--cor-broto)"></div><strong>--cor-broto</strong>Secundária</li><li><div class="amostra-cor" style="--c: var(--cor-areia)"></div><strong>--cor-areia</strong>Secundária</li><li><div class="amostra-cor" style="--c: var(--cor-tinta)"></div><strong>--cor-tinta</strong>Neutra</li><li><div class="amostra-cor" style="--c: var(--cor-papel)"></div><strong>--cor-papel</strong>Neutra</li><li><div class="amostra-cor" style="--c: var(--cor-branco)"></div><strong>--cor-branco</strong>Neutra</li><li><div class="amostra-cor" style="--c: var(--cor-cinza-600)"></div><strong>--cor-cinza-600</strong>Neutra</li><li><div class="amostra-cor" style="--c: var(--cor-cinza-400)"></div><strong>--cor-cinza-400</strong>Neutra</li><li><div class="amostra-cor" style="--c: var(--cor-cinza-200)"></div><strong>--cor-cinza-200</strong>Neutra</li><li><div class="amostra-cor" style="--c: var(--cor-sucesso)"></div><strong>--cor-sucesso</strong>Feedback</li><li><div class="amostra-cor" style="--c: var(--cor-erro)"></div><strong>--cor-erro</strong>Feedback</li><li><div class="amostra-cor" style="--c: var(--cor-aviso)"></div><strong>--cor-aviso</strong>Feedback</li><li><div class="amostra-cor" style="--c: var(--cor-info)"></div><strong>--cor-info</strong>Feedback</li></ul>
+    </section>
+
+    <section class="bloco faixa" aria-labelledby="t-tipo">
+      <h2 id="t-tipo">Tipografia</h2>
+      <div class="escala-texto">
+        <h1>Título 1 (--texto-xl)</h1>
+        <h2>Título 2 (--texto-lg)</h2>
+        <h3>Título 3 (--texto-md)</h3>
+        <p>Texto base (--texto-base) em Source Sans 3.</p>
+        <p class="texto-pequeno">Texto pequeno (--texto-sm)</p>
+        <p class="texto-xs">Texto extra pequeno (--texto-xs)</p>
+      </div>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-esp">
+      <h2 id="t-esp">Espaçamento modular</h2>
+      <div class="escala-espaco"><div class="barra-espaco"><span style="--l: var(--espaco-8)"></span><code>--espaco-8 (8px)</code></div><div class="barra-espaco"><span style="--l: var(--espaco-16)"></span><code>--espaco-16 (16px)</code></div><div class="barra-espaco"><span style="--l: var(--espaco-24)"></span><code>--espaco-24 (24px)</code></div><div class="barra-espaco"><span style="--l: var(--espaco-32)"></span><code>--espaco-32 (32px)</code></div><div class="barra-espaco"><span style="--l: var(--espaco-48)"></span><code>--espaco-48 (48px)</code></div><div class="barra-espaco"><span style="--l: var(--espaco-64)"></span><code>--espaco-64 (64px)</code></div></div>
+    </section>
+
+    <section class="bloco faixa demo-grid" aria-labelledby="t-grid">
+      <h2 id="t-grid">Grid de 12 colunas</h2>
+      <p>Breakpoints: sm 480px, md 768px, lg 1024px, xl 1280px e 2xl 1536px.</p>
+      <div class="guia-bloco"><div class="grid grid-gap-16"><div class="col-12">12</div></div></div>
+      <div class="guia-bloco"><div class="grid grid-gap-16"><div class="col-6">6</div><div class="col-6">6</div></div></div>
+      <div class="guia-bloco"><div class="grid grid-gap-16"><div class="col-4">4</div><div class="col-4">4</div><div class="col-4">4</div></div></div>
+      <div class="guia-bloco"><div class="grid grid-gap-16"><div class="col-3">3</div><div class="col-3">3</div><div class="col-3">3</div><div class="col-3">3</div></div></div>
+      <div class="guia-bloco"><div class="grid grid-gap-16"><div class="col-12 col-md-6 col-lg-3">responsivo</div><div class="col-12 col-md-6 col-lg-3">responsivo</div><div class="col-12 col-md-6 col-lg-3">responsivo</div><div class="col-12 col-md-6 col-lg-3">responsivo</div></div></div>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-botoes">
+      <h2 id="t-botoes">Botões</h2>
+      <p>Estados: passe o mouse (hover), navegue por Tab (focus) e clique (active).</p>
+      <p class="acoes">
+        <button type="button" class="botao">Primário</button>
+        <button type="button" class="botao botao-secundario">Secundário</button>
+        <button type="button" class="botao botao-destaque">Destaque</button>
+        <button type="button" class="botao botao-perigo">Perigo</button>
+        <button type="button" class="botao" disabled>Desabilitado</button>
+        <button type="button" class="botao botao-secundario" disabled>Desabilitado</button>
+      </p>
+      <p class="acoes">
+        <button type="button" class="botao botao-pequeno">Pequeno</button>
+        <button type="button" class="botao botao-grande">Grande</button>
+      </p>
+    </section>
+
+    <section class="bloco faixa" aria-labelledby="t-badges">
+      <h2 id="t-badges">Badges e tags</h2>
+      <p class="acoes">
+        <span class="badge">Padrão</span>
+        <span class="badge badge-terra">Educação ambiental</span>
+        <span class="badge badge-solido">Segurança alimentar</span>
+        <span class="badge badge-girassol">Geração de renda</span>
+        <span class="badge badge-sucesso">Ativo</span>
+        <span class="badge badge-erro">Encerrado</span>
+        <span class="badge badge-aviso">Poucas vagas</span>
+        <span class="badge badge-info">Novo</span>
+      </p>
+      <ul class="tags">
+        <li><a class="tag" href="projetos.html#horta-escola">escolas</a></li>
+        <li><a class="tag" href="projetos.html#cozinha">marmitas</a></li>
+        <li><a class="tag" href="projetos.html#sementes">jovens</a></li>
+        <li><span class="tag">voluntariado</span></li>
+      </ul>
+    </section>
+
+    <section class="bloco" aria-labelledby="t-form">
+      <h2 id="t-form">Campos de formulário</h2>
+      <div class="grid">
+        <div class="campo col-12 col-md-4"><label for="g-normal">Normal</label><input type="text" id="g-normal" placeholder="Digite aqui"></div>
+        <div class="campo is-valido col-12 col-md-4"><label for="g-valido">Válido</label><input type="text" id="g-valido" value="Maria Silva"></div>
+        <div class="campo is-invalido col-12 col-md-4"><label for="g-invalido">Inválido</label><input type="text" id="g-invalido" value="@@" aria-invalid="true" aria-describedby="g-invalido-erro"><small class="mensagem-erro" id="g-invalido-erro">Digite nome e sobrenome.</small></div>
+        <div class="campo col-12 col-md-4"><label for="g-desab">Desabilitado</label><input type="text" id="g-desab" value="Somente leitura" disabled></div>
+      </div>
+    </section>
+
+    <section class="bloco faixa" aria-labelledby="t-feedback">
+      <h2 id="t-feedback">Alerts, toasts e modal</h2>
+      <div class="alerta alerta-sucesso" role="status"><div><strong>Sucesso</strong>Sua ação foi concluída.</div></div>
+      <div class="alerta alerta-erro" role="alert"><div><strong>Erro</strong>Não foi possível concluir a ação.</div></div>
+      <div class="alerta alerta-aviso" role="note"><div><strong>Aviso</strong>Confira os dados antes de continuar.</div></div>
+      <div class="alerta alerta-info" role="note"><div><strong>Informação</strong>Mutirões acontecem todo sábado.</div><button type="button" class="alerta-fechar" data-fechar-alerta aria-label="Fechar aviso">×</button></div>
+      <p class="acoes">
+        <button type="button" class="botao botao-secundario" data-toast="sucesso" data-mensagem="Operação realizada com sucesso!">Toast de sucesso</button>
+        <button type="button" class="botao botao-secundario" data-toast="erro" data-mensagem="Algo deu errado. Tente novamente.">Toast de erro</button>
+        <button type="button" class="botao botao-secundario" data-toast="aviso" data-mensagem="Atenção: sessão expira em breve.">Toast de aviso</button>
+        <button type="button" class="botao" data-modal-abrir="modal-demo">Abrir modal</button>
+      </p>
+    </section>
+
+    <dialog class="modal" id="modal-demo" aria-labelledby="modal-demo-titulo">
+      <div class="modal-cabecalho">
+        <h2 id="modal-demo-titulo">Exemplo de modal</h2>
+        <button type="button" class="alerta-fechar" data-modal-fechar aria-label="Fechar">×</button>
+      </div>
+      <div class="modal-corpo"><p>Feche com o botão, a tecla Esc ou clicando fora da janela.</p></div>
+      <div class="modal-rodape"><button type="button" class="botao" data-modal-fechar>Entendi</button></div>
+    </dialog>
+  </main>
+
+  <footer class="rodape">
+    <p>Instituto Raízes do Bairro, CNPJ 00.000.000/0001-00 (fictício, projeto acadêmico).</p>
+    <nav aria-label="Redes sociais">
+      <ul>
+        <li><a href="https://www.instagram.com/">Instagram</a></li>
+        <li><a href="https://www.facebook.com/">Facebook</a></li>
+        <li><a href="https://www.youtube.com/">YouTube</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

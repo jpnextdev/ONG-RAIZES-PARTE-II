@@ -1,0 +1,18 @@
+/* Entrega II — refinamentos de acessibilidade, fluidez e interação */
+:root { color-scheme: light; }
+html { scroll-padding-top: calc(var(--altura-topo) + var(--espaco-24)); }
+:where(a, button, input, select, textarea, summary):focus-visible { outline: 3px solid var(--cor-girassol); outline-offset: 3px; }
+:where(button, input, select, textarea) { font: inherit; }
+button:disabled, .botao:disabled, [aria-disabled="true"] { opacity: .48; cursor: not-allowed; box-shadow: none; transform: none; }
+img { max-width: 100%; height: auto; }
+main, section, article, .grid > *, .cartao { min-width: 0; }
+:where(p, h1, h2, h3, li, a) { overflow-wrap: break-word; }
+:where(.botao, .menu-toggle, .submenu-toggle) { touch-action: manipulation; }
+:where(.botao, .menu-toggle, .submenu-toggle):active:not(:disabled) { transform: translateY(1px); }
+@media (max-width: 29.999em) { .topo { gap: var(--espaco-8); } .marca { font-size: 1rem; } .bloco { padding-block: var(--espaco-32); } }
+@media (min-width: 30em) and (max-width: 47.999em) { .bloco { padding-block: var(--espaco-48); } }
+@media (min-width: 48em) and (max-width: 63.999em) { .grid { --grid-gap: var(--espaco-24); } }
+@media (min-width: 64em) and (max-width: 79.999em) { .menu-lista { gap: var(--espaco-16); } }
+@media (min-width: 80em) and (max-width: 95.999em) { .grid { --grid-gap: var(--espaco-32); } }
+@media (min-width: 96em) { .bloco { padding-block: var(--espaco-64); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }

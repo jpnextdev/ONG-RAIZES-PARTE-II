@@ -1,0 +1,13 @@
+/* Hierarquia tipográfica */
+h1, h2, h3, h4 { font-family: var(--fonte-titulo); line-height: var(--altura-linha-titulo); color: var(--cor-mata); margin: 0 0 0.6em; }
+h1 { font-size: var(--texto-xl); font-weight: var(--peso-negrito); letter-spacing: -0.02em; }
+h2 { font-size: var(--texto-lg); font-weight: var(--peso-negrito); }
+h3 { font-size: var(--texto-md); font-weight: var(--peso-medio); }
+h4 { font-size: var(--texto-base); font-weight: var(--peso-negrito); }
+p, li { max-width: 68ch; }
+small, .texto-pequeno { font-size: var(--texto-sm); }
+.texto-xs { font-size: var(--texto-xs); }
+.texto-destaque { font-size: var(--texto-md); }
+a { color: var(--cor-folha); text-underline-offset: 0.18em; transition: color var(--transicao); }
+a:hover { color: var(--cor-mata); }
+figcaption { font-size: var(--texto-sm); margin-top: var(--espaco-8); color: var(--cor-cinza-600); }

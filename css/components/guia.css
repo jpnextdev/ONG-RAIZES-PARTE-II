@@ -1,0 +1,11 @@
+/* Guia de estilo: amostras de cores, tipografia e espaçamento */
+.amostras { display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: var(--espaco-16); list-style: none; padding: 0; margin: 0; }
+.amostras li { max-width: none; font-size: var(--texto-xs); }
+.amostra-cor { height: 4rem; margin-bottom: var(--espaco-8); background: var(--c); border: 1px solid var(--cor-cinza-200); border-radius: var(--raio-sm); }
+.amostras strong { display: block; font-size: var(--texto-sm); }
+.escala-texto > * { margin: 0 0 var(--espaco-8); }
+.escala-espaco { display: grid; gap: var(--espaco-8); }
+.barra-espaco { display: flex; align-items: center; gap: var(--espaco-16); }
+.barra-espaco span { display: block; height: 1rem; width: var(--l); background: var(--cor-folha); border-radius: 2px; }
+.demo-grid .grid > div { padding: var(--espaco-16); text-align: center; background: var(--cor-broto); border: 1px solid var(--cor-folha); border-radius: var(--raio-sm); font-weight: var(--peso-semi); }
+.guia-bloco { margin-bottom: var(--espaco-32); }

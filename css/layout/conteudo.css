@@ -1,0 +1,58 @@
+/* Layouts específicos por tipo de conteúdo */
+
+/* Hero (grid: texto + imagem) */
+.hero { display: grid; gap: var(--espaco-24); padding-block: var(--espaco-32); }
+.hero-texto p { font-size: var(--texto-md); }
+.hero-imagem img { border-radius: 0 0 0 80px; box-shadow: var(--sombra-md); }
+@media (min-width: 64em) {
+  .hero { grid-template-columns: 1fr 1.2fr; align-items: center; gap: var(--espaco-48); padding-block: var(--espaco-64); }
+}
+
+/* Indicadores numéricos (grid 2 → 4 colunas) */
+.numeros { background: var(--cor-mata); color: var(--cor-branco); padding-block: var(--espaco-32); }
+.numeros h2 { color: var(--cor-branco); }
+.numeros dl, .indicadores { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--espaco-16); margin: 0; }
+.numeros div, .indicadores div { display: flex; flex-direction: column; }
+.numeros dt { order: 2; font-size: var(--texto-sm); }
+.numeros dd { order: 1; margin: 0; font-family: var(--fonte-titulo); font-size: 2.6rem; font-weight: var(--peso-negrito); color: var(--cor-girassol); }
+@media (min-width: 48em) { .numeros dl { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 96em) { .numeros dd { font-size: 3.4rem; } }
+
+/* Linha do tempo: vertical no mobile, horizontal no desktop */
+.linha-do-tempo { list-style: none; padding: 0; margin: 0; border-left: 3px solid var(--cor-folha); }
+.linha-do-tempo li { padding: 0 0 var(--espaco-16) var(--espaco-24); position: relative; }
+.linha-do-tempo li::before { content: ""; position: absolute; left: -0.6rem; top: 0.35rem; width: 1rem; height: 1rem; border-radius: 50%; background: var(--cor-girassol); border: 3px solid var(--cor-folha); }
+.linha-do-tempo h3 { margin-bottom: 0.2rem; }
+@media (min-width: 64em) {
+  .linha-do-tempo { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--espaco-24); border-left: 0; border-top: 3px solid var(--cor-folha); }
+  .linha-do-tempo li { padding: var(--espaco-24) 0 0; }
+  .linha-do-tempo li::before { left: 0; top: -0.65rem; }
+}
+
+/* Listas de conteúdo */
+.lista-equipe, .documentos { padding-left: 1.1rem; }
+.documentos a { font-weight: var(--peso-semi); }
+.contato p { margin: 0 0 var(--espaco-8); }
+.passos { padding-left: 1.3rem; }
+.passos li { margin-bottom: var(--espaco-8); }
+
+/* Cabeçalho de página interna e atalhos */
+.cabecalho-pagina { background: var(--cor-broto); }
+.atalhos { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--espaco-8); }
+.atalhos a { display: inline-block; padding: 0.35rem 0.9rem; border: 2px solid var(--cor-folha); border-radius: var(--raio-pill); text-decoration: none; font-weight: var(--peso-semi); background: var(--cor-branco); }
+.atalhos a:hover { background: var(--cor-folha); color: var(--cor-branco); }
+
+/* Campanha de doação */
+.campanha { background: var(--cor-branco); border: 2px solid var(--cor-girassol); border-radius: var(--raio-md); padding: var(--espaco-24); margin-bottom: var(--espaco-24); box-shadow: var(--sombra-sm); }
+.campanha label { font-weight: var(--peso-semi); display: block; }
+progress { width: 100%; height: 1.2rem; accent-color: var(--cor-folha); }
+
+/* Rodapé (flex) */
+.rodape { background: var(--cor-mata); color: var(--cor-branco); padding-block: var(--espaco-24); display: flex; flex-direction: column; gap: var(--espaco-16); }
+.rodape p { margin: 0; }
+.rodape a { color: var(--cor-girassol); }
+.rodape ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--espaco-8) var(--espaco-24); }
+@media (min-width: 64em) { .rodape { flex-direction: row; justify-content: space-between; align-items: center; } }
+
+/* Página de cadastro: introdução + formulário */
+.cadastro-intro img { border-radius: var(--raio-md); margin-top: var(--espaco-16); }

@@ -1,0 +1,29 @@
+/* Botões com estados: hover, focus, active e disabled */
+.botao {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--espaco-8);
+  font: inherit; font-weight: var(--peso-semi); text-decoration: none; cursor: pointer;
+  color: var(--cor-branco); background: var(--cor-folha);
+  padding: 0.75rem 1.3rem; border: 2px solid var(--cor-folha); border-radius: var(--raio-pill);
+  transition: background var(--transicao), border-color var(--transicao), color var(--transicao), transform var(--transicao), box-shadow var(--transicao);
+}
+.botao:hover { background: var(--cor-mata); border-color: var(--cor-mata); color: var(--cor-branco); box-shadow: var(--sombra-sm); }
+.botao:focus-visible { outline: 3px solid var(--cor-girassol); outline-offset: 3px; }
+.botao:active { transform: translateY(1px) scale(0.98); box-shadow: none; background: var(--cor-tinta); }
+.botao:disabled, .botao[aria-disabled="true"] { background: var(--cor-cinza-200); border-color: var(--cor-cinza-200); color: var(--cor-cinza-600); cursor: not-allowed; box-shadow: none; transform: none; }
+
+.botao-secundario { background: transparent; color: var(--cor-mata); }
+.botao-secundario:hover { background: var(--cor-broto); color: var(--cor-mata); }
+.botao-secundario:active { background: var(--cor-cinza-200); color: var(--cor-mata); }
+.botao-secundario:disabled { background: transparent; border-color: var(--cor-cinza-200); color: var(--cor-cinza-600); }
+
+.botao-destaque { background: var(--cor-girassol); border-color: var(--cor-girassol); color: var(--cor-tinta); }
+.botao-destaque:hover { background: #d4a51f; border-color: #d4a51f; color: var(--cor-tinta); }
+.botao-destaque:active { background: #b88d14; }
+
+.botao-perigo { background: var(--cor-erro); border-color: var(--cor-erro); }
+.botao-perigo:hover { background: #8c1d17; border-color: #8c1d17; }
+
+.botao-pequeno { padding: 0.4rem 0.9rem; font-size: var(--texto-sm); }
+.botao-grande { padding: 1rem 1.8rem; font-size: var(--texto-md); }
+.acoes { display: flex; flex-wrap: wrap; gap: var(--espaco-16); }
+.botoes-form { display: flex; flex-wrap: wrap; gap: var(--espaco-16); }

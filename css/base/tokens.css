@@ -1,0 +1,65 @@
+/* ==========================================================================
+   DESIGN SYSTEM — tokens (variáveis CSS customizadas)
+   Breakpoints (mobile-first, em em; variáveis não funcionam em @media):
+     sm 30em (480px) · md 48em (768px) · lg 64em (1024px)
+     xl 80em (1280px) · 2xl 96em (1536px)
+   ========================================================================== */
+:root {
+  /* ---- Cores primárias ---- */
+  --cor-mata: #23402F;        /* verde escuro: títulos, rodapé */
+  --cor-folha: #3F7A50;       /* verde médio: ações e links */
+  /* ---- Cores secundárias ---- */
+  --cor-girassol: #E8B931;    /* amarelo: foco e destaques */
+  --cor-terra: #7A4E33;       /* marrom: categorias */
+  --cor-broto: #E3EEDC;       /* verde claro: faixas de fundo */
+  --cor-areia: #F5EBDD;       /* bege: fundo de tags */
+  /* ---- Cores neutras ---- */
+  --cor-tinta: #1C2620;       /* texto principal */
+  --cor-papel: #FBFCF9;       /* fundo da página */
+  --cor-branco: #FFFFFF;
+  --cor-cinza-600: #4A5A50;   /* texto secundário */
+  --cor-cinza-400: #6E8A69;   /* bordas de campos */
+  --cor-cinza-200: #C9D6C4;   /* divisores */
+  /* ---- Cores de feedback ---- */
+  --cor-sucesso: #1E7B3A;  --cor-sucesso-fundo: #E4F4E8;
+  --cor-erro: #B3261E;     --cor-erro-fundo: #FCE8E6;
+  --cor-aviso: #7A5200;    --cor-aviso-fundo: #FFF3D1;
+  --cor-info: #1F5F8B;     --cor-info-fundo: #E1EFF8;
+
+  /* ---- Tipografia ---- */
+  --fonte-titulo: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --fonte-texto: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --texto-xs: 0.8125rem;                          /* 13px */
+  --texto-sm: 0.9375rem;                          /* 15px */
+  --texto-base: 1.0625rem;                        /* 17px */
+  --texto-md: 1.25rem;                            /* 20px */
+  --texto-lg: clamp(1.5rem, 4.5vw, 2.4rem);       /* h2 */
+  --texto-xl: clamp(2.2rem, 7vw, 4rem);           /* h1 */
+  --peso-normal: 400; --peso-medio: 500; --peso-semi: 600; --peso-negrito: 700;
+  --altura-linha-texto: 1.6; --altura-linha-titulo: 1.15;
+
+  /* ---- Espaçamento modular ---- */
+  --espaco-8: 0.5rem;     /*  8px */
+  --espaco-16: 1rem;      /* 16px */
+  --espaco-24: 1.5rem;    /* 24px */
+  --espaco-32: 2rem;      /* 32px */
+  --espaco-48: 3rem;      /* 48px */
+  --espaco-64: 4rem;      /* 64px */
+
+  /* ---- Forma, sombra, movimento ---- */
+  --raio-sm: 8px; --raio-md: 12px; --raio-pill: 999px;
+  --sombra-sm: 0 1px 3px rgb(28 38 32 / 0.12);
+  --sombra-md: 0 6px 18px rgb(28 38 32 / 0.14);
+  --sombra-lg: 0 18px 40px rgb(28 38 32 / 0.25);
+  --transicao: 0.2s ease;
+  --z-menu: 50; --z-modal: 100; --z-toast: 200;
+
+  /* ---- Layout ---- */
+  --largura-max: 75rem;                 /* 1200px */
+  --gutter: var(--espaco-16);
+  --altura-topo: 4.5rem;
+}
+@media (min-width: 30em) { :root { --gutter: var(--espaco-24); } }
+@media (min-width: 48em) { :root { --gutter: var(--espaco-48); } }
+@media (min-width: 80em) { :root { --largura-max: 80rem; } }
+@media (min-width: 96em) { :root { --largura-max: 90rem; --texto-base: 1.125rem; } }

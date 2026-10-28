@@ -1,0 +1,37 @@
+/* Formulários estilizados com validação visual */
+.formulario fieldset { border: 1px solid var(--cor-cinza-200); border-radius: var(--raio-md); padding: var(--espaco-16) var(--espaco-24) var(--espaco-24); margin: 0 0 var(--espaco-24); background: var(--cor-branco); min-width: 0; }
+.formulario legend { font-family: var(--fonte-titulo); font-weight: var(--peso-negrito); color: var(--cor-mata); padding: 0 0.4rem; font-size: 1.15rem; }
+.aviso { font-size: var(--texto-sm); }
+.campo { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: var(--espaco-16); }
+.campo label { font-weight: var(--peso-semi); }
+.campo small { color: var(--cor-cinza-600); }
+
+input, select, textarea { font: inherit; width: 100%; padding: 0.65rem 0.8rem; color: var(--cor-tinta); background: var(--cor-branco); border: 2px solid var(--cor-cinza-400); border-radius: var(--raio-sm); transition: border-color var(--transicao), box-shadow var(--transicao), background var(--transicao); }
+input::placeholder, textarea::placeholder { color: #6b7a70; }
+input:hover, select:hover, textarea:hover { border-color: var(--cor-folha); }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--cor-folha); box-shadow: 0 0 0 4px rgb(232 185 49 / 0.55); }
+input:disabled, select:disabled, textarea:disabled { background: #eef2eb; color: var(--cor-cinza-600); cursor: not-allowed; border-color: var(--cor-cinza-200); }
+input[type="radio"], input[type="checkbox"] { width: 1.15rem; height: 1.15rem; padding: 0; accent-color: var(--cor-folha); }
+textarea { resize: vertical; min-height: 6rem; }
+abbr[title] { text-decoration: none; color: var(--cor-erro); }
+
+/* Estados de validação (classes aplicadas por js/ui.js; :user-* como reforço sem JS) */
+.campo.is-invalido input, .campo.is-invalido select, .campo.is-invalido textarea,
+.campo input:user-invalid, .campo select:user-invalid { border-color: var(--cor-erro); background: var(--cor-erro-fundo); }
+.campo.is-valido input, .campo.is-valido select, .campo.is-valido textarea,
+.campo input:user-valid, .campo select:user-valid { border-color: var(--cor-sucesso); background: var(--cor-sucesso-fundo) ; }
+.campo.is-invalido input:focus, .campo.is-invalido select:focus, .campo.is-invalido textarea:focus { box-shadow: 0 0 0 4px rgb(179 38 30 / 0.25); }
+.mensagem-erro { display: flex; align-items: center; gap: 0.35rem; color: var(--cor-erro); font-size: var(--texto-sm); font-weight: var(--peso-semi); }
+.mensagem-erro::before { content: "!"; display: inline-grid; place-items: center; flex: none; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: var(--cor-erro); color: var(--cor-branco); font-size: var(--texto-xs); }
+.campo.is-valido > label::after { content: " ✓"; color: var(--cor-sucesso); }
+
+.opcoes { display: grid; gap: var(--espaco-8); margin-bottom: var(--espaco-16); }
+.opcoes label, .aceite { display: flex; align-items: center; gap: var(--espaco-8); cursor: pointer; }
+.aceite { margin-top: var(--espaco-8); }
+
+/* Colunas do formulário (grid) */
+@media (min-width: 48em) {
+  .formulario fieldset { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--espaco-16); }
+  .formulario fieldset > .campo, .formulario fieldset > .opcoes, .formulario fieldset > .aceite, .formulario fieldset > legend { grid-column: span 2; }
+  .formulario fieldset > .campo-curto { grid-column: span 1; }
+}

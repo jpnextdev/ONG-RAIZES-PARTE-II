@@ -1,0 +1,19 @@
+/* Estrutura geral da página com CSS Grid (topo / principal / rodapé) */
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "topo" "principal" "rodape";
+  min-height: 100vh;
+}
+.topo { grid-area: topo; }
+main { grid-area: principal; }
+.rodape { grid-area: rodape; }
+
+/* Faixas de largura total com conteúdo centralizado na largura máxima */
+.topo, .hero, .numeros, .bloco, .rodape {
+  padding-inline: max(var(--gutter), calc((100% - var(--largura-max)) / 2));
+}
+.bloco { padding-block: var(--espaco-48); }
+.faixa { background: var(--cor-broto); }
+@media (min-width: 64em) { .bloco { padding-block: var(--espaco-64); } }

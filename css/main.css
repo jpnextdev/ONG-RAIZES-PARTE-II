@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Instituto Raízes do Bairro — ponto de entrada do CSS (arquitetura modular)
+   Ordem: base → layout → componentes
+   ========================================================================== */
+@import url("base/tokens.css");
+@import url("base/reset.css");
+@import url("base/tipografia.css");
+
+@import url("layout/pagina.css");
+@import url("layout/grid.css");
+@import url("layout/conteudo.css");
+
+@import url("components/navegacao.css");
+@import url("components/botoes.css");
+@import url("components/cartoes.css");
+@import url("components/formularios.css");
+@import url("components/feedback.css");
+@import url("components/badges.css");
+@import url("components/guia.css");
+
+@import url("components/refinamentos.css");

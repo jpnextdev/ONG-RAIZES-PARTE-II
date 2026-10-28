@@ -1,0 +1,17 @@
+/* Cards responsivos de projetos */
+.cartao { display: flex; flex-direction: column; height: 100%; background: var(--cor-branco); border: 1px solid var(--cor-cinza-200); border-radius: var(--raio-md); overflow: hidden; box-shadow: var(--sombra-sm); transition: transform var(--transicao), box-shadow var(--transicao); }
+.cartao:hover, .cartao:focus-within { transform: translateY(-4px); box-shadow: var(--sombra-md); }
+.cartao-imagem img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.cartao-corpo { display: flex; flex-direction: column; flex: 1; gap: var(--espaco-8); padding: var(--espaco-24); }
+.cartao-corpo h3 { margin: 0; }
+.cartao-corpo > p { margin: 0; }
+.cartao-rodape { margin-top: auto; padding-top: var(--espaco-16); border-top: 1px solid var(--cor-broto); }
+.indicadores { gap: var(--espaco-16); }
+.indicadores dt { font-size: var(--texto-sm); color: var(--cor-cinza-600); }
+.indicadores dd { margin: 0; font-family: var(--fonte-titulo); font-size: 1.8rem; font-weight: var(--peso-negrito); color: var(--cor-mata); }
+
+/* Caixa simples (missão, formas de doar) */
+.caixa { background: var(--cor-branco); border: 1px solid var(--cor-cinza-200); border-top: 4px solid var(--cor-folha); border-radius: var(--raio-md); padding: var(--espaco-24); box-shadow: var(--sombra-sm); }
+.faixa .caixa { background: var(--cor-papel); }
+.caixa h3 { margin-top: 0; }
+.caixa ul { padding-left: 1.1rem; margin: 0; }
